@@ -145,7 +145,8 @@ export default function HomePage() {
               <span className="close" onClick={handleCancel}>&times;</span>
             </div>
             <div className="modal-body">
-              <p>Nhập mật khẩu để xem thiệp của <span style={{fontWeight: 600, color: '#d63384'}}>{selectedName}</span></p>
+              <p>Nhập mật khẩu để xem thiệp của</p>
+              <p><span style={{fontWeight: 600, color: '#d63384'}}>{selectedName}</span></p>
               <input
                 type="password"
                 value={password}

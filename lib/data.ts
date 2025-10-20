@@ -14,9 +14,10 @@ export type MessagePart =
 export const personData: Record<string, PersonData> = {
   "Nguyễn Hồng Luyến": {
     password: "123",
-    // ví dụ: chỉ ảnh
+    // ví dụ: hỗn hợp text + ảnh
     message: [
-      { type: "image", src: "/assets/messages/luyen-card.png", alt: "Thiệp cho Luyến" }
+      { type: "text", text: "Chúc Luyến luôn xinh đẹp, duyên dáng và có cuộc sống hạnh phúc! 🌸" },
+      { type: "image", src: "/poster.png", alt: "Poster đặc biệt cho Luyến" }
     ],
     wish: "VUI VẺ, HẠNH PHÚC VÀ LUÔN LUÔN XINH ĐẸP NHÉ 💖💖",
     cardStyle: "pink-rose",

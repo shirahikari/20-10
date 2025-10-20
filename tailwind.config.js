@@ -8,8 +8,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'comfortaa': ['var(--font-comfortaa)', 'cursive'],
-        'caveat': ['var(--font-caveat)', 'cursive'],
+        'dancing-script': ['var(--font-dancing-script)', 'cursive'],
+        'mali': ['var(--font-mali)', 'cursive'],
+        'playfair-display': ['var(--font-playfair-display)', 'serif'],
       },
     },
   },

@@ -1,15 +1,24 @@
 import type { Metadata } from 'next'
-import { Comfortaa, Caveat } from 'next/font/google'
+import { Dancing_Script, Mali, Playfair_Display } from 'next/font/google'
 import './globals.css'
 
-const comfortaa = Comfortaa({
-  subsets: ['latin'],
-  variable: '--font-comfortaa',
+const dancingScript = Dancing_Script({
+  subsets: ['latin', 'vietnamese'],
+  variable: '--font-dancing-script',
+  weight: ['400', '500', '600', '700'],
 })
 
-const caveat = Caveat({
-  subsets: ['latin'],
-  variable: '--font-caveat',
+const mali = Mali({
+  subsets: ['latin', 'vietnamese'],
+  variable: '--font-mali',
+  weight: ['200', '300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+})
+
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin', 'vietnamese'],
+  variable: '--font-playfair-display',
+  weight: ['400', '500', '600', '700', '800', '900'],
 })
 
 export const metadata: Metadata = {
@@ -24,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="vi">
-      <body className={`${comfortaa.variable} ${caveat.variable} font-comfortaa`}>
+      <body className={`${dancingScript.variable} ${mali.variable} ${playfairDisplay.variable} font-mali`}>
         {children}
       </body>
     </html>

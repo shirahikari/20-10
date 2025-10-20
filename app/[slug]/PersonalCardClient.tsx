@@ -16,6 +16,10 @@ export default function PersonalCardClient({ name, personInfo }: PersonalCardCli
     router.push('/')
   }
 
+  // Check if message contains any images
+  const hasImage = typeof personInfo.message !== 'string' && 
+    personInfo.message.some(part => part.type === 'image')
+
   return (
     <div className="container">
       {/* Global Logo */}
@@ -59,9 +63,11 @@ export default function PersonalCardClient({ name, personInfo }: PersonalCardCli
 
           {/* Content */}
           <div className="greeting-content">
-            <div className="date-container">
-              <h2 className="main-date">20/10</h2>
-            </div>
+            {!hasImage && (
+              <div className="date-container">
+                <h2 className="main-date">20/10</h2>
+              </div>
+            )}
             <div className="main-message">
               {/* Support legacy string message or new MessagePart[] */}
               {typeof personInfo.message === 'string' ? (
